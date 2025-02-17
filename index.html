@@ -8,13 +8,11 @@
     <title>Z-Kit</title>
 </head>
 <body>
-    <h1>Z-Kit</h1>
+    <h1>Z-Kit Launcher</h1>
     <hr>
-    
-    <h2>Embedder</h2>
     <script>
         function create() {
-            var url = document.getElementById('input').value;
+            var url = "https://zkit.above.gay/main";
             var win = window.open();
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
@@ -27,12 +25,7 @@
             win.document.body.appendChild(iframe);
             window.location.href = "https://www.google.com/";
         }
-    </script>
-    <input type="text" value="https://zkit.above.gay/apps/extprint3r" placeholder="https://example.com/" id='input' autofocus>
-    <button onclick='create()'>Go!</button>
-    
-    <!--typescript support :3-->
-    <script src="https://unpkg.com/typescript/lib/tsserverlibrary.js"></script>
-    <script src="https://raw.githack.com/basarat/typescript-script/master/transpiler.js"></script>
+
+    <button onclick='create()'>Launch!</button>
 </body>
 </html>
