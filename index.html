@@ -9,7 +9,27 @@
 </head>
 <body>
     <h1>Z-Kit</h1>
-
+    <hr>
+    
+    <h2>Embedder</h2>
+    <script>
+        function create() {
+            var url = document.getElementById('input');
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe').value;
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+        }
+    </script>
+    <input type="text" value="https://zkit.above.gay/apps/extprint3r" placeholder="https://example.com/" id='input' autofocus>
+    <button onclick='create()'>Go!</button>
+    
     <!--typescript support :3-->
     <script src="https://unpkg.com/typescript/lib/tsserverlibrary.js"></script>
     <script src="https://raw.githack.com/basarat/typescript-script/master/transpiler.js"></script>
