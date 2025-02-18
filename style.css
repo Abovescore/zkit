@@ -4,12 +4,6 @@ body {
     background-color: #262626;
 }
 
-.header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-}
-
 #navbar {
     position: sticky;
     top: 0;
