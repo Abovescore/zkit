@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-size: 28px;
+            font-family: Atkinson Hyperlegible Next, sans-serif;
+            background-color: #232323;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 9999;
+            display: flex;
+        }
+
+        #navbar a {
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #f2f2f2;
+            text-align: center;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        #iframe-container {
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="../../">Home</a>
+    <a href="../../../main/apps/proxy/">Proxy</a>
+    <a class="active" href="#">extprint3r</a>
+</div>
+
+<div id="iframe-container">
+    <iframe src="../../../apps/extprint3r/"></iframe>
+</div>
+
+</body>
+</html>

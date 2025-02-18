@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-size: 28px;
-    font-family: Atkinson Hyperlegible Next, serif;
-    background-color: #262626;
+    font-family: Atkinson Hyperlegible Next, sans-serif;
+    background-color: #232323;
 }
 
 #navbar {
@@ -23,8 +23,8 @@ body {
 }
 
 #navbar a:hover {
-background-color: #ddd;
-color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 #navbar a.active {
