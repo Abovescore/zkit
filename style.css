@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Atkinson Hyperlegible Next, serif;
     background-color: #262626;
 }
 
@@ -29,8 +29,4 @@ color: black;
 #navbar a.active {
     background-color: #04AA6D;
     color: white;
-}
-
-.content {
-    padding: 16px;
 }
