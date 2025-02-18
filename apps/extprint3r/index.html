@@ -746,7 +746,7 @@
 
             const instructions = document.createElement("p");
             const settingsUrl = "chrome://extensions?id=" + extId;
-            instructions.innerHTML = "Open the following URL in a new tab:<br><br><span>" + settingsUrl + "</span><br><br> Then go back to this one and press the button below which will open a new tab. Immediately press ctrl+tab and start spamming the switch called \"Allow Access to file URLs\" for about 5 seconds. Once you are done, close that tab and switch to the other one. Then, press cancel on the print dialog and the tab should close. If done correctly, the extension " + extName + " should've been killed.";
+            instructions.innerHTML = "Open the following URL in a new tab:<br><br><span>" + settingsUrl + "</span><br><br> Then go back to this page and press the button below. It will open a new tab. Immediately press ctrl+tab and start spamming the switch called \"Allow Access to file URLs\" for about 5 seconds. Once you are done, close that tab and switch to the first page that opened. Then, press cancel on the print dialog and the tab should close. If done correctly, the extension " + extName + " should've been killed.";
             instructions.style.padding = "15px";
             instructions.style.textAlign = "center";
 
@@ -756,7 +756,7 @@
             buttonContainer.style.padding = "10px";
 
             const printButton = document.createElement("button");
-            printButton.textContent = "The Print3r";
+            printButton.textContent = "Read the instructions above!";
             printButton.style.width = "100px";
             printButton.style.marginTop = "-15px";
             printButton.style.marginBottom = "15px";
