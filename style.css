@@ -13,6 +13,10 @@ body {
     font-family: 'Atkinson Hyperlegible Next', serif;
 }
 
+text {
+    color: white;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
