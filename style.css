@@ -2,6 +2,13 @@ body {
     background-color: #262626;
 }
 
+.atkinson-hyperlegible-next-<uniquifier> {
+  font-family: "Atkinson Hyperlegible Next", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
