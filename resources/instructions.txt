@@ -1,0 +1,22 @@
+Guide 1: Online
+Step 1: go to 'above.gay' on your chromebook to whitelist the website
+Step 2: then go to 'zkit.above.gay'
+Step 3: (optionally) change page icon to Schoology, and then press 'Lanch Z-Kit'
+Step 4: press 'Disable' on the extension you wish to temporarily disable
+Step 5: follow instructions and ur done :3 restart chromebook to re-enable the extension 
+
+Guide 2: Local File
+Step 1: Go to https://files.catbox.moe/nawra1.html
+Step 2: press CTRL + S to save the file
+Step 3: open file explorer to move the file to someplace obscure, then open it
+Step 4: (optionally) change page icon to Schoology, and then press 'Lanch Z-Kit'
+Step 5: press 'Disable' on the extension you wish to temporarily disable
+Step 6: follow instructions and ur done :3 restart chromebook to re-enable the extension 
+
+Guide 3: Data File
+Step 1: Go to https://files.catbox.moe/62x5cq.txt
+Step 2: press CTRL + A, then CTRL + C
+Step 3: delete everything in your address bar, then CTRL + V. then press enter
+Step 4: (optionally) change page icon to Schoology, and then press 'Lanch Z-Kit'
+Step 5: press 'Disable' on the extension you wish to temporarily disable
+Step 6: follow instructions and ur done :3 restart chromebook to re-enable the extension 
