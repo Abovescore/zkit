@@ -9,27 +9,290 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     
-    <title>Z-Kit</title>
+    <title>Z-Kit Launcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Atkinson Hyperlegible Next', serif;
+        }
+
+        #tsparticles {
+            position: absolute;
+            width: 100%;
+            height: 99%;
+            background-color: #111;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 0 20px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(0, 0, 0, 0.5),
+                0 0 50px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(0, 0, 0, 0.3),
+                0 0 70px rgba(0, 0, 0, 0.2);
+            animation: auraAnimation 2s infinite alternate, colorChange 3s infinite alternate;
+        }
+
+        @keyframes auraAnimation {
+            0% {
+                text-shadow: 
+                    0 0 20px rgba(0, 0, 0, 0.6),
+                    0 0 30px rgba(0, 0, 0, 0.6),
+                    0 0 40px rgba(0, 0, 0, 0.5),
+                    0 0 50px rgba(0, 0, 0, 0.4),
+                    0 0 60px rgba(0, 0, 0, 0.3),
+                    0 0 70px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                text-shadow: 
+                    0 0 30px rgba(0, 0, 0, 0.7),
+                    0 0 40px rgba(0, 0, 0, 0.7),
+                    0 0 50px rgba(0, 0, 0, 0.6),
+                    0 0 60px rgba(0, 0, 0, 0.5),
+                    0 0 70px rgba(0, 0, 0, 0.4),
+                    0 0 80px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                text-shadow: 
+                    0 0 40px rgba(0, 0, 0, 0.8),
+                    0 0 50px rgba(0, 0, 0, 0.8),
+                    0 0 60px rgba(0, 0, 0, 0.7),
+                    0 0 70px rgba(0, 0, 0, 0.6),
+                    0 0 80px rgba(0, 0, 0, 0.5),
+                    0 0 90px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #fff;
+            }
+            50% {
+                color: #aaa;
+            }
+            100% {
+                color: #fff;
+            }
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #ccc;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        input:focus, select:focus, button:focus {
+            outline: none;
+            border: 2px solid #007BFF;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #003f8e;
+            transform: scale(1.1);
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: #111;
+            transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        button:hover::before {
+            width: 350%;
+            height: 350%;
+            top: -25%;
+            left: -25%;
+        }
+
+        button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        button:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Z-Kit Launcher</h1>
-    <hr>
+    <div class="container">
+        <h1>Z-Kit Launcher</h1>
+        
+        <label for="title-input">Page Title</label>
+        <input type="text" id="title-input" placeholder="New Tab" value="New Tab"/>
+
+        <label for="pre-saved-options">Page Icon</label>
+        <select id="pre-saved-options">
+            <option value="" selected="selected">Choose an Option</option>
+            <option value="schoology">Schoology</option>
+            <option value="clever">Clever</option>
+            <option value="google-classroom">Google Classroom</option>
+            <option value="googledocs">Google Docs</option>
+            <option value="googleslides">Google Slides</option>
+        </select>
+        
+        <button id="generate-button"><span>Launch Z-Kit</span></button>
+    </div>
+
     <script>
-        function create() {
-            var url = "https://zkit.above.gay/main";
+        const url = "https://zkit.above.gay/main/";
+
+        document.getElementById('pre-saved-options').addEventListener('change', (e) => {
+            const titleInput = document.getElementById('title-input');
+            if (e.target.value) {
+                if (e.target.value === 'google-classroom') {
+                    titleInput.value = 'Home';
+                } else if (e.target.value === 'clever') {
+                    titleInput.value = 'Clever | Portal';
+                } else if (e.target.value === 'schoology') {
+                    titleInput.value = 'Home | Schoology';
+                } else if (e.target.value === 'googledocs') {
+                    titleInput.value = 'Untitled document - Google Docs';
+                } else if (e.target.value === 'googleslides') {
+                    titleInput.value = 'Untitled presentation - Google Slides';
+                }
+            } else {
+                titleInput.value = 'New Tab';
+            }
+        });
+
+        document.getElementById('generate-button').addEventListener('click', () => {
+            const titleInput = document.getElementById('title-input');
+            const title = titleInput.value;
+
+            let faviconUrl = '';
+
+            const preSavedOption = document.getElementById('pre-saved-options').value;
+            if (preSavedOption === 'schoology') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/schoology.png';
+            } else if (preSavedOption === 'google-classroom') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/classroom.png';
+            } else if (preSavedOption === 'clever') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/clever.png';
+            } else if (preSavedOption === 'googledocs') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googledocs.png';
+            } else if (preSavedOption === 'googleslides') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googleslides.png';
+            }
+
             var win = window.open();
+            win.document.title = title;
+
+            var link = win.document.createElement('link');
+            link.rel = 'shortcut icon';
+            link.href = faviconUrl;
+            win.document.head.appendChild(link);
+
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
+
             var iframe = win.document.createElement('iframe');
             iframe.style.border = 'none';
             iframe.style.width = '100%';
             iframe.style.height = '100%';
             iframe.style.margin = '0';
             iframe.src = url;
-            win.document.body.appendChild(iframe);
-            window.location.href = "https://www.google.com/";
-        } </script>
 
-    <button onclick='create()'>Launch!</button>
+            win.document.body.appendChild(iframe);
+
+            window.location.href = "https://www.google.com/";
+        });
+    </script>
+
+    <!-- partial:index.partial.html -->
+    <!-- tsParticles container -->
+    <div id="tsparticles"></div>
+    <!-- tsParticles lib - https://github.com/matteobruni/tsparticles -->
+    <script src="https://zkit.above.gay/resources/particles/particles.js"></script>
+    <!-- partial -->
+    <script  src="https://zkit.above.gay/resources/particles/script.js"></script>
 </body>
 </html>
