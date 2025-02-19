@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.475.0/dist/umd/lucide.min.js"></script>
 
     <style>
         body {
@@ -19,8 +20,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
 
+        }
         body, html {
             width: 100%;
             height: 100%;
@@ -58,12 +59,44 @@
         #iframe-container {
             flex-grow: 1;
             width: 100%;
+            position: relative;
         }
 
         iframe {
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        .floating-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 10000;
+        }
+
+        .control-button {
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .control-button:hover {
+            background-color: #038857;
+        }
+
+        .control-button svg {
+            width: 24px;
+            height: 24px;
         }
     </style>
 </head>
@@ -77,8 +110,28 @@
 </div>
 
 <div id="iframe-container">
-    <iframe src="https://e.widgetbot.io/channels/1341303023107837982/1341442897567813702"></iframe>
-</div>
+    <!-- Add an id to reference the iframe easily -->
+    <iframe id="mainframe" name="mainframe" src="https://e.widgetbot.io/channels/1341303023107837982/1341442897567813702"></iframe>
+    <div class="floating-controls">
+      <button class="control-button" onclick="document.getElementById('mainframe').contentWindow.history.go(-1)">
+        <!-- Back -->
+        <i data-lucide="arrow-left"></i>
+      </button>
+      <button class="control-button" onclick="document.getElementById('mainframe').contentWindow.location.reload()">
+        <!-- Reload -->
+        <i data-lucide="refresh-cw"></i>
+      </button>
+      <button class="control-button" onclick="document.getElementById('mainframe').contentWindow.history.go(1)">
+        <!-- Forwards -->
+        <i data-lucide="arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
