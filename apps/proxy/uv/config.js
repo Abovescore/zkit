@@ -1,5 +1,5 @@
 self.__uv$config = {
-  prefix: "/apps/proxy/uv/",
+  prefix: "/uv/go",
   bare: "https://goto.zkit.above.gay/bare/",
   encodeUrl: Ultraviolet.codec.base64.encode,
   decodeUrl: Ultraviolet.codec.base64.decode,
