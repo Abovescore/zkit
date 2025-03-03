@@ -51,7 +51,7 @@
             console.log(`Iframe URL changed to: ${currentURL}`);
             lastURL = currentURL;
             
-            const websitePath = currentURL.replace(window.location.origin, "").replace("/szvy/szvy/", "");
+            const websitePath = currentURL.replace(window.location.origin, "").replace("/uv/go/", "");
             localStorage.setItem("decoded", websitePath);
             
             const decodedValue = __uv$config.decodeUrl(websitePath);
