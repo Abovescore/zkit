@@ -3,8 +3,8 @@ self.__uv$config = {
     bare:'https://goto.zkit.above.gay/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
-    handler: 'uv/uv.handler.js',
-    bundle: 'uv/uv.bundle.js',
-    config: 'uv/uv.config.js',
-    sw: 'uv/uv.sw.js',
+    handler: '/apps/proxy/uv/uv.handler.js',
+    bundle: '/apps/proxy/uv/uv.bundle.js',
+    config: '/apps/proxy/uv/uv.config.js',
+    sw: '/apps/proxy/uv/uv.sw.js',
 };
