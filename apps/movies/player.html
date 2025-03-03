@@ -10,20 +10,20 @@
   </head>
   <body>
     <nav>
-      <h1>szvyflix</h1>
+      <h1>Z-Flix</h1>
       <div>
-        <a href="index.html">Home</a>
-        <a href="movies.html">Movies</a>
+        <a href="index.html">Search</a>
+        <a href="movies.html">Discover</a>
       </div>
     </nav>
     <main>
       <div>
-        <label for="player-source">choose a movie source:</label>
+        <label for="player-source">Choose a movie provider:</label>
         <select id="player-source">
-          <option value="streamlink">streamlink (default)</option>
+          <option value="streamlink">Streamlink (default)</option>
           <option value="embed.su">embed.su</option>
           <option value="moviesapi.club">moviesapi.club</option>
-          <option value="vidbinge">vidbinge</option>
+          <option value="vidbinge">Vidbinge</option>
           <option value="vidsrc">vidsrc</option>
           <option value="2embed">2embed</option>
         </select>
@@ -62,7 +62,7 @@
           playerContainer.innerHTML = "";
           playerContainer.appendChild(iframe);
         } else {
-          playerContainer.innerHTML = "<h1>error: no movie found :c</h1>";
+          playerContainer.innerHTML = "<h1>ERROR: No movie found 3:</h1>";
         }
       }
 
