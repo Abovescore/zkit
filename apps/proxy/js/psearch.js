@@ -178,7 +178,7 @@ var tabs = [];
               }
 
               window.navigator.serviceWorker
-                .register("/uv/sw.js", {
+                .register("uv/uv.sw.js", {
                   scope: __uv$config.prefix,
                 })
                 .then(() => {
@@ -204,7 +204,7 @@ var tabs = [];
               var searchUrl =
                 "https://duckduckgo.com/?q=" + encodeURIComponent(url);
               window.navigator.serviceWorker
-                .register("/uv/sw.js", {
+                .register("uv/uv.sw.js", {
                   scope: __uv$config.prefix,
                 })
                 .then(() => {
