@@ -232,6 +232,7 @@
             <option value="google-classroom">Google Classroom</option>
             <option value="googledocs">Google Docs</option>
             <option value="googleslides">Google Slides</option>
+            <option value="canvas">Canvas</option>
         </select>
         
         <button id="generate-button"><span>Launch Z-Kit</span></button>
@@ -253,6 +254,8 @@
                     titleInput.value = 'Untitled document - Google Docs';
                 } else if (e.target.value === 'googleslides') {
                     titleInput.value = 'Untitled presentation - Google Slides';
+                } else if (e.target.value === 'canvas') {
+                    titleInput.value = 'Dashboard';
                 }
             } else {
                 titleInput.value = 'New Tab';
@@ -275,6 +278,8 @@
             } else if (preSavedOption === 'googledocs') {
                 faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googledocs.png';
             } else if (preSavedOption === 'googleslides') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googleslides.png';
+            } else if (e.target.value === 'canvas') {
                 faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googleslides.png';
             }
 
